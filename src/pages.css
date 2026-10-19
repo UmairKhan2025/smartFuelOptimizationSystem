@@ -1,0 +1,731 @@
+.mobile-brand, .mobile-bottom-nav { display: none; }
+
+/* Dashboard */
+.dashboard-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: -7px 0 14px; }
+.dashboard-actions .button { min-height: 32px; padding: 0 10px; font-size: 9px; }
+.dashboard-status-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.dashboard-status-card { min-width: 0; padding: 17px 16px; }
+.dashboard-status-card .panel-heading { margin-bottom: 15px; }
+.dashboard-fuel-metrics, .dashboard-budget-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 15px 0 13px; }
+.dashboard-fuel-metrics > div, .dashboard-budget-metrics > div { display: flex; min-width: 0; flex-direction: column; gap: 7px; }
+.dashboard-fuel-metrics strong, .dashboard-budget-metrics strong { color: #243f53; font-family: "Manrope", sans-serif; font-size: clamp(16px, 1.6vw, 23px); line-height: 1.2; white-space: nowrap; }
+.dashboard-fuel-metrics span, .dashboard-budget-metrics span { color: #83949d; font-size: 9px; }
+.dashboard-progress, .budget-progress-track { height: 6px; overflow: hidden; border-radius: 8px; background: #e3eaee; }
+.dashboard-progress i, .budget-progress-track i { display: block; height: 100%; border-radius: inherit; background: #168363; }
+.dashboard-footnote { margin: 9px 0 0; color: #8a9aa1; font-size: 8px; }
+.dashboard-footnote.positive { color: #168363; }
+.dashboard-chart-grid { margin-top: 16px; }
+.dashboard-chart-grid .chart-panel { min-height: 240px; }
+.dashboard-trips-card, .dashboard-recommendations { margin-top: 16px; padding: 16px; }
+.dashboard-trips-card .table-scroll { margin-top: 13px; }
+.dashboard-trips-card table { min-width: 560px; }
+.dashboard-recommendation-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.dashboard-recommendation { display: flex; align-items: flex-start; gap: 10px; min-height: 72px; padding: 12px; border-radius: 7px; }
+.dashboard-recommendation.success { background: #e7f4ed; color: #168363; }
+.dashboard-recommendation.warning { background: #fff4e2; color: #b67418; }
+.dashboard-recommendation > .icon { flex: none; margin-top: 1px; }
+.dashboard-recommendation strong { color: #314e49; font-size: 10px; }
+.dashboard-recommendation.warning strong { color: #815012; }
+.dashboard-recommendation p { margin: 4px 0 0; color: #71877d; font-size: 9px; line-height: 1.45; }
+.dashboard-recommendation.warning p { color: #94734d; }
+
+/* Budget management */
+.budget-summary-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; }
+.budget-summary-card { position: relative; display: flex; min-height: 100px; flex-direction: column; align-items: flex-start; gap: 5px; padding: 14px; }
+.budget-summary-card > span { color: #7b8f9c; font-size: 9px; }
+.budget-summary-card > strong { color: #213f53; font-family: "Manrope", sans-serif; font-size: 21px; }
+.budget-summary-card > small { color: #8a9ba3; font-size: 8px; }
+.budget-summary-icon { position: absolute; top: 13px; right: 13px; display: grid; width: 25px; height: 25px; place-items: center; color: #168363; }
+.budget-summary-icon.blue { color: #3c89a4; }
+.budget-progress-panel { margin-top: 15px; padding: 15px; }
+.budget-progress-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.budget-progress-heading h2 { margin: 0; color: #314a5d; font-family: "Manrope", sans-serif; font-size: 12px; }
+.budget-progress-panel .budget-progress-track { margin-top: 12px; }
+.budget-progress-panel > p { margin: 8px 0 0; color: #168363; font-size: 8px; }
+.budget-analytics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
+.budget-analytics-grid > .chart-panel { min-height: 224px; }
+.budget-chart-unit { margin-top: 11px; color: #82939c; font-size: 8px; }
+.expense-trend-chart { position: relative; height: 135px; margin: 5px 0 0 30px; padding-bottom: 16px; }
+.expense-trend-chart svg { position: absolute; inset: 0 0 16px; width: 100%; height: calc(100% - 16px); overflow: visible; }
+.expense-chart-grid { fill: none; stroke: #e7edf0; stroke-width: 1; vector-effect: non-scaling-stroke; }
+.expense-chart-line { fill: none; stroke: #168363; stroke-width: 2.5; vector-effect: non-scaling-stroke; }
+.expense-chart-axis { position: absolute; top: -1px; bottom: 17px; left: -29px; display: flex; flex-direction: column; justify-content: space-between; color: #80919b; font-size: 7px; }
+.expense-chart-dates { position: absolute; right: 0; bottom: 0; left: 0; display: flex; justify-content: space-between; color: #80919b; font-size: 7px; }
+.budget-analytics-grid .bar-chart { margin-top: 8px; }
+.budget-management-grid { display: grid; grid-template-columns: minmax(210px, .64fr) minmax(0, 1.2fr); gap: 15px; margin-top: 15px; }
+.budget-update-panel, .budget-vehicle-panel, .budget-alerts-panel { padding: 15px; }
+.budget-update-panel form { margin-top: 14px; }
+.budget-update-panel .field-label { font-size: 8px; }
+.budget-update-panel .field-label input, .budget-update-panel .field-label select { height: 34px; }
+.budget-update-panel .button { min-height: 31px; font-size: 9px; }
+.budget-form-note { margin: 10px 0 0; color: #8999a0; font-size: 8px; line-height: 1.45; }
+.budget-vehicle-panel .table-scroll { margin-top: 12px; }
+.budget-vehicle-panel table { min-width: 430px; }
+.budget-vehicle-panel th, .budget-vehicle-panel td { height: 34px; }
+.budget-alerts-panel { margin-top: 15px; }
+.budget-alert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 13px; }
+.budget-alert { display: flex; align-items: flex-start; gap: 9px; min-height: 62px; padding: 10px; border-radius: 6px; }
+.budget-alert.warning { background: #fff4e2; color: #b8771e; }
+.budget-alert.danger { background: #fdf0f0; color: #c04b4b; }
+.budget-alert > .icon { flex: none; }
+.budget-alert strong { color: #875713; font-size: 9px; }
+.budget-alert.danger strong { color: #9d4141; }
+.budget-alert p { margin: 4px 0 0; color: #8d8e8c; font-size: 8px; line-height: 1.45; }
+
+/* Crisis mode */
+.crisis-status-banner { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; padding: 10px 12px; border-radius: 7px; background: #fff4e2; color: #ad6a11; }
+.crisis-status-icon { display: grid; width: 25px; height: 25px; flex: none; place-items: center; }
+.crisis-status-banner > div { flex: 1; }
+.crisis-status-banner strong { color: #8a5716; font-size: 9px; }
+.crisis-status-banner p { margin: 3px 0 0; color: #967f62; font-size: 8px; }
+.crisis-controls-panel { margin-bottom: 14px; padding: 13px 15px; }
+.crisis-controls-panel .panel-heading { margin-bottom: 9px; }
+.crisis-toggle-row { display: flex; align-items: center; gap: 9px; margin-bottom: 8px; color: #7d9195; font-size: 8px; }
+.crisis-toggle-row strong { color: #168363; }
+.crisis-information-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 14px; }
+.crisis-forecast-panel, .crisis-suggestions-panel, .crisis-priority-panel, .emergency-panel { padding: 15px; }
+.forecast-days { display: block; margin: 12px 0 0; color: #233f53; font-family: "Manrope", sans-serif; font-size: 22px; }
+.forecast-description { margin: 5px 0 10px; color: #8697a1; font-size: 8px; line-height: 1.5; }
+.forecast-chart-title { color: #81929a; font-size: 7px; }
+.crisis-forecast { position: relative; height: 127px; margin: 6px 0 0 25px; padding-bottom: 16px; }
+.crisis-forecast svg { position: absolute; inset: 0 0 16px; width: 100%; height: calc(100% - 16px); overflow: visible; }
+.crisis-forecast-grid { fill: none; stroke: #e8edf0; stroke-width: 1; vector-effect: non-scaling-stroke; }
+.crisis-forecast-line { fill: none; stroke: #168363; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.crisis-forecast-axis { position: absolute; top: 0; bottom: 16px; left: -23px; display: flex; flex-direction: column; justify-content: space-between; color: #82929b; font-size: 7px; }
+.crisis-forecast-days { position: absolute; right: 0; bottom: 0; left: 0; display: flex; justify-content: space-between; color: #82929b; font-size: 7px; }
+.forecast-legend { display: flex; align-items: center; gap: 5px; margin-top: 9px; color: #168363; font-size: 7px; }
+.forecast-legend i { width: 6px; height: 6px; border-radius: 50%; background: #168363; }
+.forecast-disclaimer { margin: 7px 0 0; color: #8999a1; font-size: 7px; }
+.crisis-guidance-column { display: grid; gap: 14px; }
+.crisis-suggestions-panel .panel-heading, .crisis-priority-panel .panel-heading { margin-bottom: 10px; }
+.conservation-suggestion { display: flex; align-items: flex-start; gap: 8px; padding: 10px 0; border-top: 1px solid #eef1f1; color: #168363; }
+.conservation-suggestion > .icon { flex: none; margin-top: 1px; }
+.conservation-suggestion strong { color: #354f59; font-size: 9px; }
+.conservation-suggestion p { margin: 3px 0 0; color: #87979e; font-size: 8px; line-height: 1.4; }
+.priority-group { display: grid; gap: 8px; margin-top: 8px; }
+.priority-group > .badge { justify-self: start; font-size: 7px; }
+.priority-trip { display: flex; justify-content: space-between; gap: 9px; color: #526c7a; font-size: 8px; }
+.priority-trip strong { color: #496c5c; font-size: 8px; }
+.priority-trip strong.priority-critical { color: #bc7130; }
+.priority-group.deferred { padding-top: 10px; border-top: 1px solid #edf1f1; }
+.crisis-priority-panel .small-control { margin-top: 11px; font-size: 8px; }
+.emergency-panel { margin-top: 14px; }
+.emergency-panel > .panel-heading { margin-bottom: 12px; }
+.emergency-callout { display: flex; align-items: flex-start; gap: 8px; padding: 10px; border-radius: 6px; background: #fff4e2; color: #b77821; }
+.emergency-callout > .icon { flex: none; }
+.emergency-callout strong { color: #865611; font-size: 9px; }
+.emergency-callout p { margin: 4px 0 0; color: #947b5b; font-size: 8px; }
+.emergency-panel > p, .emergency-panel > small { display: block; margin: 9px 0 0; color: #81929a; font-size: 8px; line-height: 1.5; }
+.emergency-panel > .button { min-height: 30px; margin-top: 10px; font-size: 8px; }
+
+/* Trip planner */
+.trip-planner-layout { display: grid; grid-template-columns: minmax(245px, .57fr) minmax(0, 1.35fr); align-items: start; gap: 16px; }
+.trip-form-panel { padding: 16px; }
+.trip-form-panel .panel-heading { margin-bottom: 16px; }
+.trip-form-panel .field-label { margin-bottom: 11px; font-size: 8px; }
+.trip-form-panel .field-label input, .trip-form-panel .field-label select { height: 34px; font-size: 9px; }
+.trip-form-panel > .button { min-height: 34px; margin-top: 1px; font-size: 9px; }
+.trip-fuel-available { display: flex; gap: 8px; margin-top: 10px; padding: 10px; border-radius: 6px; background: #e8f5ee; color: #168363; }
+.trip-fuel-available > .icon { flex: none; }
+.trip-fuel-available strong { color: #168363; font-size: 8px; }
+.trip-fuel-available p { margin: 3px 0 0; color: #7f9689; font-size: 8px; line-height: 1.4; }
+.trip-form-footnote { margin: 10px 0 0; color: #82949b; font-size: 7px; line-height: 1.45; }
+.trip-crisis-link { display: none; margin-top: 10px; padding: 0; border: 0; background: none; color: #87959c; font-size: 8px; }
+.trip-results-column { min-width: 0; }
+.trip-map-panel { overflow: hidden; border-radius: 9px; background: #fff; box-shadow: var(--shadow); }
+.trip-map-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px; }
+.trip-map-heading > span { display: flex; align-items: center; gap: 6px; color: #466479; font-size: 8px; }
+.trip-map-panel .map-preview { min-height: 327px; border-radius: 0; }
+.trip-context-panel { margin-top: 14px; padding: 15px; }
+.trip-context-panel .panel-heading { margin-bottom: 12px; }
+.trip-context-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.trip-context-metrics > div { display: flex; flex-direction: column; gap: 5px; }
+.trip-context-metrics strong { color: #29475c; font-family: "Manrope", sans-serif; font-size: 16px; white-space: nowrap; }
+.trip-context-metrics span { color: #83949d; font-size: 7px; }
+.trip-route-alert { display: flex; gap: 8px; margin-top: 14px; padding: 10px; border-radius: 7px; background: #fff4e2; color: #b9771b; }
+.trip-route-alert > .icon { flex: none; }
+.trip-route-alert strong { color: #8d5918; font-size: 8px; }
+.trip-route-alert p { margin: 3px 0 0; color: #937e61; font-size: 8px; line-height: 1.4; }
+.trip-route-options { display: none; }
+.trip-route-options.show-routes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }
+.trip-route-options.show-routes .trip-why-route { grid-column: 1 / -1; }
+.trip-before-go { margin-top: 14px; padding: 15px; }
+.trip-before-go > div:last-child { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; }
+.trip-before-go > div:last-child > span { display: grid; grid-template-columns: 17px 1fr; gap: 4px 7px; color: #168363; }
+.trip-before-go strong { color: #314e5e; font-size: 8px; }
+.trip-before-go small { grid-column: 2; color: #8797a0; font-size: 7px; line-height: 1.4; }
+.trip-before-go .icon { grid-row: span 2; }
+.desktop-trip-before { display: block; }
+
+/* Fleet management */
+.fleet-management-panel { margin-bottom: 12px; padding: 14px; }
+.fleet-management-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+.fleet-management-heading h2 { margin: 3px 0 0; color: #26445a; font-family: "Manrope", sans-serif; font-size: 15px; }
+.fleet-management-heading p { margin: 3px 0 0; color: #82949c; font-size: 8px; }
+.fleet-management-heading .button { min-height: 30px; font-size: 8px; }
+.fleet-search { display: flex; align-items: center; gap: 7px; height: 34px; padding: 0 9px; border: 1px solid #e2e9ed; border-radius: 6px; background: #fff; color: #80939b; }
+.fleet-search input { width: 100%; border: 0; outline: 0; color: #405967; font-size: 9px; }
+.fleet-filters { display: flex; gap: 15px; margin-top: 10px; }
+.fleet-filters button { padding: 0; border: 0; background: transparent; color: #8b9aa1; font-size: 8px; cursor: pointer; }
+.fleet-filters button.active { color: #168363; font-weight: 700; }
+.fleet-vehicle-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.fleet-vehicle-card { padding: 13px; }
+.fleet-card-heading { display: flex; align-items: center; gap: 8px; }
+.fleet-vehicle-icon { display: grid; width: 27px; height: 27px; flex: none; place-items: center; border-radius: 6px; background: #eef5f8; color: #397fa0; }
+.fleet-card-heading > div { min-width: 0; flex: 1; }
+.fleet-card-heading strong, .fleet-card-heading small { display: block; }
+.fleet-card-heading strong { overflow: hidden; color: #29485d; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+.fleet-card-heading small { margin-top: 2px; color: #8798a0; font-size: 7px; }
+.fleet-card-heading .badge { font-size: 7px; }
+.fleet-vehicle-details { display: grid; gap: 7px; margin: 12px 0; }
+.fleet-vehicle-details > div { display: flex; justify-content: space-between; gap: 8px; }
+.fleet-vehicle-details dt, .fleet-vehicle-details dd { margin: 0; font-size: 7px; }
+.fleet-vehicle-details dt { color: #82939c; }
+.fleet-vehicle-details dd { color: #526d7d; text-align: right; }
+.fleet-fuel-progress { height: 4px; overflow: hidden; border-radius: 5px; background: #e6ecef; }
+.fleet-fuel-progress i { display: block; height: 100%; border-radius: inherit; background: #168363; }
+.fleet-card-actions { display: flex; gap: 5px; margin-top: 10px; }
+.fleet-card-actions .button { min-height: 27px; padding: 0 7px; font-size: 7px; }
+.fleet-detail-expanded { display: flex; flex-direction: column; gap: 3px; margin-top: 9px; padding: 8px; border-radius: 5px; background: #f2f7f4; }
+.fleet-detail-expanded strong { color: #3f6955; font-size: 8px; }
+.fleet-detail-expanded span { color: #71877b; font-size: 7px; line-height: 1.4; }
+.fleet-tip { display: flex; align-items: flex-start; gap: 8px; margin-top: 12px; padding: 10px; border-radius: 6px; background: #eaf6ef; color: #168363; }
+.fleet-tip > .icon { flex: none; }
+.fleet-tip strong { color: #287252; font-size: 8px; }
+.fleet-tip p { margin: 3px 0 0; color: #7b9185; font-size: 7px; }
+
+/* Fuel purchases and entry screens */
+.fuel-summary-grid, .analytics-summary-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; }
+.fuel-summary-card, .analytics-summary-card { position: relative; display: flex; min-height: 104px; flex-direction: column; align-items: flex-start; gap: 7px; padding: 15px; }
+.fuel-summary-card > .icon, .analytics-summary-card > .icon { position: absolute; top: 15px; right: 15px; color: #168363; }
+.fuel-summary-card > span, .analytics-summary-card > span { color: #7e919a; font-size: 9px; }
+.fuel-summary-card > strong, .analytics-summary-card > strong { color: #203e53; font-family: "Manrope", sans-serif; font-size: 21px; line-height: 1.25; }
+.fuel-summary-card > small, .analytics-summary-card > small { color: #8a9ba3; font-size: 8px; }
+.fuel-management-table { margin-top: 15px; padding: 16px; }
+.fuel-table-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.fuel-table-heading h2, .fuel-vehicle-chart h2, .fuel-quality-card h2, .analytics-chart-card h2, .analytics-vehicle-table h2, .entry-panel-heading h2, .entry-aside-card h2, .notification-preferences h2, .notification-guide h2 { margin: 0; color: #29475c; font-family: "Manrope", sans-serif; font-size: 12px; }
+.fuel-table-heading p, .analytics-chart-card > p { margin: 4px 0 0; color: #8396a0; font-size: 8px; }
+.fuel-table-heading > .button, .analytics-toolbar > .button { min-height: 31px; font-size: 9px; }
+.fuel-table-actions { display: flex; gap: 7px; }
+.fuel-add-mobile { display: none; }
+.fuel-record-filters { display: grid; grid-template-columns: 1fr 1fr auto; align-items: end; gap: 12px; margin-top: 14px; }
+.fuel-record-filters .field-label { margin-bottom: 0; font-size: 8px; }
+.fuel-record-filters .field-label select { height: 33px; }
+.fuel-export-mobile { display: none; }
+.fuel-management-table table { min-width: 600px; }
+.fuel-management-table th { height: 34px; }
+.fuel-management-table td { height: 37px; }
+.fuel-management-table .text-button { font-size: 8px; }
+.fuel-action-divider { padding: 0 4px; color: #9aa8a7; }
+.fuel-records-footnote { display: flex; justify-content: space-between; gap: 10px; margin-top: 9px; color: #82949d; font-size: 8px; }
+.fuel-record-bottom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.fuel-vehicle-chart, .fuel-quality-card { min-height: 184px; padding: 15px; }
+.fuel-vehicle-chart > div:first-child small { display: block; margin-top: 4px; color: #82939d; font-size: 7px; }
+.fuel-vehicle-bars { display: flex; align-items: flex-end; justify-content: space-around; height: 110px; margin-top: 8px; padding: 0 14px 19px; border-bottom: 1px solid #e9eef0; }
+.fuel-vehicle-bar { display: flex; width: 19%; height: 100%; flex-direction: column; align-items: center; justify-content: flex-end; gap: 5px; }
+.fuel-vehicle-bar > span { color: #83949c; font-size: 7px; }
+.fuel-vehicle-bar > i { width: 100%; max-height: 82px; border-radius: 3px 3px 0 0; background: #bce6cf; }
+.fuel-vehicle-bar:nth-child(4) > i { background: #168363; }
+.fuel-vehicle-bar > small { color: #81929a; font-size: 7px; white-space: nowrap; }
+.fuel-chart-legend { display: flex; align-items: center; gap: 5px; margin-top: 10px; color: #168363; font-size: 7px; }
+.fuel-chart-legend i, .analytics-legend i { width: 6px; height: 6px; border-radius: 50%; background: #168363; }
+.fuel-quality-card > strong { display: block; margin-top: 17px; color: #233f53; font-family: "Manrope", sans-serif; font-size: 18px; }
+.fuel-quality-card p { margin: 10px 0; color: #81939d; font-size: 8px; line-height: 1.55; }
+.fuel-quality-card > small { color: #168363; font-size: 8px; }
+.entry-page-layout { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(230px, .84fr); align-items: start; gap: 16px; }
+.entry-form-panel { padding: 17px; }
+.entry-panel-heading { margin-bottom: 15px; }
+.entry-panel-heading p { margin: 4px 0 0; color: #82949e; font-size: 8px; }
+.entry-panel-heading b { color: #ca725d; }
+.entry-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 14px; }
+.entry-form-grid .field-label { font-size: 8px; }
+.entry-form-grid .field-label input, .entry-form-grid .field-label select, .entry-form-panel > .field-label input { height: 33px; font-size: 9px; }
+.entry-form-grid .field-label small { color: #899ba2; font-size: 7px; font-weight: 400; }
+.entry-full-width { grid-column: 1 / -1; }
+.entry-estimate { display: flex; align-items: flex-start; gap: 9px; margin: 2px 0 13px; padding: 11px; border-radius: 6px; background: #e8f5ee; color: #168363; }
+.entry-estimate > .icon { flex: none; }
+.entry-estimate strong, .entry-capacity-notice strong { display: block; font-size: 9px; }
+.entry-estimate span { display: block; margin-top: 4px; color: #718f80; font-size: 8px; line-height: 1.45; }
+.entry-form-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 15px; }
+.entry-form-actions .button { min-height: 31px; font-size: 9px; }
+.entry-aside { display: grid; gap: 13px; }
+.entry-aside-card { padding: 16px; }
+.entry-aside-car { display: inline-flex; margin: 17px 0 8px; color: #168363; }
+.entry-aside-card > p { margin: 10px 0; color: #7f939d; font-size: 8px; line-height: 1.55; }
+.entry-aside-card > p strong { color: #415c66; font-weight: 600; }
+.entry-aside-card > .badge { font-size: 7px; }
+.form-error { margin: 0; color: #a63d39; font-size: 9px; }
+.fuel-entry-layout { grid-template-columns: minmax(0, 1.55fr) minmax(230px, .75fr); }
+.fuel-entry-form > .field-label { font-size: 8px; }
+.fuel-entry-form .entry-form-grid { margin-bottom: 1px; }
+.fuel-total-preview { display: flex; flex-direction: column; gap: 5px; margin: 3px 0 13px; padding: 13px; border-radius: 6px; background: #e8f5ee; }
+.fuel-total-preview > span, .preview-impact { color: #168363; font-size: 8px; }
+.fuel-total-preview > strong { color: #203e53; font-family: "Manrope", sans-serif; font-size: 22px; }
+.fuel-total-preview > small { color: #82969a; font-size: 8px; }
+.preview-caption { display: block; margin-top: 15px; color: #82939a; font-size: 8px; }
+.preview-value { display: block; margin: 7px 0 12px; color: #203e53; font-family: "Manrope", sans-serif; font-size: 18px; }
+.entry-progress { height: 5px; overflow: hidden; border-radius: 5px; background: #e2e9ec; }
+.entry-progress i { display: block; height: 100%; border-radius: inherit; background: #168363; }
+.fuel-entry-aside .entry-aside-card > p { margin: 8px 0 14px; }
+.fuel-entry-aside .entry-aside-card > small.preview-impact { display: block; margin-top: 14px; }
+.fuel-budget-preview .preview-value { margin-top: 16px; }
+.fuel-capacity-notice { display: flex; gap: 9px; padding: 12px; border-radius: 6px; background: #e8f5ee; color: #168363; }
+.fuel-capacity-notice > .icon { flex: none; }
+.fuel-capacity-notice strong { font-size: 8px; }
+.fuel-capacity-notice span { display: block; margin-top: 4px; color: #758f82; font-size: 7px; line-height: 1.45; }
+
+/* Analytics */
+.analytics-toolbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 9px; color: #526f72; font-size: 9px; font-weight: 600; }
+.analytics-filter-form { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) auto; align-items: end; gap: 12px; }
+.analytics-filter-form .field-label { margin-bottom: 0; font-size: 8px; }
+.analytics-filter-form .field-label select { height: 32px; }
+.analytics-filter-form > .button { min-height: 32px; font-size: 9px; }
+.analytics-notice { margin: 8px 0 0; color: #168363; font-size: 8px; }
+.analytics-summary-grid { margin-top: 13px; }
+.analytics-summary-card { min-height: 88px; padding: 12px; }
+.analytics-summary-card > strong { font-size: 18px; }
+.analytics-summary-card > small { font-size: 7px; }
+.analytics-visual-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; margin-top: 13px; }
+.analytics-chart-card { min-width: 0; min-height: 190px; padding: 14px; }
+.analytics-chart-card h2 { font-size: 10px; }
+.analytics-chart-card > p { font-size: 7px; }
+.analytics-unit { display: block; margin-top: 12px; color: #85969d; font-size: 7px; }
+.analytics-line-chart { position: relative; height: 118px; margin: 4px 0 0 21px; padding-bottom: 14px; }
+.analytics-line-chart svg { position: absolute; inset: 0 0 14px; width: 100%; height: calc(100% - 14px); }
+.analytics-grid-line { fill: none; stroke: #e7edef; stroke-width: 1; vector-effect: non-scaling-stroke; }
+.analytics-line { fill: none; stroke: #168363; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.analytics-chart-axis { position: absolute; top: 0; bottom: 15px; left: -19px; display: flex; flex-direction: column; justify-content: space-between; color: #83959d; font-size: 6px; }
+.analytics-chart-dates { position: absolute; right: 0; bottom: 0; left: 0; display: flex; justify-content: space-between; color: #83959d; font-size: 6px; }
+.analytics-legend { display: flex; align-items: center; gap: 5px; color: #168363; font-size: 6px; }
+.cost-analysis-content { display: flex; align-items: center; justify-content: center; gap: 16px; min-height: 125px; }
+.cost-donut { display: grid; width: 112px; height: 112px; flex: none; place-items: center; border-radius: 50%; background: conic-gradient(#168363 0 60%, #b9e7ce 60% 85%, #3e94bb 85% 100%); }
+.cost-donut > div { display: flex; width: 74px; height: 74px; flex-direction: column; align-items: center; justify-content: center; border-radius: 50%; background: white; }
+.cost-donut strong { color: #233f53; font-family: "Manrope", sans-serif; font-size: 12px; }
+.cost-donut small { margin-top: 3px; color: #84949b; font-size: 6px; }
+.cost-analysis-content ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+.cost-analysis-content li { display: flex; align-items: flex-start; gap: 6px; color: #4b626b; font-size: 7px; }
+.cost-analysis-content li > i { width: 6px; height: 6px; margin-top: 2px; border-radius: 50%; }
+.cost-analysis-content li > i.commute { background: #168363; }
+.cost-analysis-content li > i.errands { background: #b9e7ce; }
+.cost-analysis-content li > i.personal { background: #3e94bb; }
+.cost-analysis-content li small { display: block; margin-top: 3px; color: #83959c; font-size: 6px; }
+.chart-disclaimer { color: #84949b; font-size: 6px; }
+.analytics-bars { display: flex; align-items: flex-end; justify-content: space-around; height: 128px; margin: 12px 0 8px; padding: 0 14px 17px; border-bottom: 1px solid #e7edef; }
+.analytics-bar-column { display: flex; width: 18%; height: 100%; flex-direction: column; align-items: center; justify-content: flex-end; gap: 4px; }
+.analytics-bar-column > span { color: #82949c; font-size: 6px; }
+.analytics-bar-column > i { width: 100%; max-height: 90px; border-radius: 3px 3px 0 0; background: #b9e7ce; }
+.analytics-bar-column:last-child > i { background: #168363; }
+.analytics-bar-column > small { color: #82949c; font-size: 6px; }
+.analytics-vehicle-table { margin-top: 13px; padding: 14px; }
+.analytics-vehicle-table h2 { margin-bottom: 11px; }
+.analytics-vehicle-table table { min-width: 460px; }
+.analytics-vehicle-table th, .analytics-vehicle-table td { height: 34px; }
+.analytics-tip { display: flex; align-items: flex-start; gap: 9px; margin-top: 13px; padding: 11px; border-radius: 6px; background: #e8f5ee; color: #168363; }
+.analytics-tip > .icon { flex: none; }
+.analytics-tip strong, .analytics-tip small { display: block; }
+.analytics-tip strong { color: #168363; font-size: 8px; }
+.analytics-tip small { margin-top: 4px; color: #789184; font-size: 7px; line-height: 1.45; }
+
+/* Notifications */
+.notifications-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.notifications-toolbar > .button { min-height: 31px; font-size: 8px; }
+.notification-filter-tabs { display: flex; flex-wrap: wrap; gap: 13px; }
+.notification-filter-tabs button { padding: 6px 2px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #6f838b; font-size: 8px; cursor: pointer; }
+.notification-filter-tabs button.active { border-bottom-color: #168363; color: #168363; font-weight: 700; }
+.notifications-layout { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(220px, .72fr); align-items: start; gap: 14px; }
+.notification-feed { display: grid; gap: 9px; }
+.notification-card { position: relative; display: flex; align-items: flex-start; gap: 11px; width: 100%; min-height: 93px; padding: 13px; border: 1px solid #e5ecea; border-radius: 8px; background: white; text-align: left; cursor: pointer; }
+.notification-card:hover { border-color: #c5dbcf; }
+.notification-card.is-unread { border-color: #cfe8dc; background: #f0f8f3; }
+.notification-card .notification-icon { width: 27px; height: 27px; border-radius: 7px; }
+.notification-content { display: flex; flex: 1; flex-direction: column; align-items: flex-start; gap: 5px; }
+.notification-content > .badge { padding: 3px 6px; font-size: 6px; }
+.notification-content > strong { color: #294457; font-size: 9px; }
+.notification-content > span:not(.badge) { color: #7f929c; font-size: 7px; line-height: 1.45; }
+.notification-content > small { color: #81939b; font-size: 6px; }
+.notification-unread-dot { position: absolute; top: 15px; right: 14px; width: 6px; height: 6px; border-radius: 50%; background: #168363; }
+.notification-aside { display: grid; gap: 12px; }
+.notification-preferences, .notification-guide { padding: 15px; }
+.notification-preferences > p, .notification-guide > p, .notification-guide > small { display: block; margin: 11px 0; color: #7e929c; font-size: 8px; line-height: 1.55; }
+.preference-row { display: flex; align-items: center; justify-content: space-between; width: 100%; margin: 11px 0; padding: 0; border: 0; background: transparent; color: #168363; font-size: 7px; text-align: left; cursor: pointer; }
+.preference-row:not(.enabled) { color: #83939a; }
+.preference-toggle { width: 26px; height: 15px; padding: 2px; border-radius: 10px; background: #cbd6d1; }
+.preference-toggle b { display: block; width: 11px; height: 11px; border-radius: 50%; background: white; transition: transform .15s; }
+.preference-toggle.on { background: #168363; }
+.preference-toggle.on b { transform: translateX(11px); }
+.notification-preferences > .button { min-height: 29px; margin-top: 5px; font-size: 7px; }
+.notification-guide > small { margin-bottom: 0; }
+
+@media (max-width: 700px) {
+  .fuel-summary-grid, .analytics-summary-grid { grid-template-columns: 1fr; gap: 7px; }
+  .fuel-summary-card { min-height: 71px; gap: 4px; padding: 9px 10px; }
+  .fuel-summary-card > .icon, .analytics-summary-card > .icon { top: 11px; right: 10px; width: 15px; height: 15px; }
+  .fuel-summary-card > span, .fuel-summary-card > small { font-size: 7px; }
+  .fuel-summary-card > strong { font-size: 16px; }
+  .fuel-management-table { margin-top: 8px; padding: 10px; }
+  .fuel-table-heading h2, .fuel-vehicle-chart h2, .fuel-quality-card h2 { font-size: 9px; }
+  .fuel-table-heading p { font-size: 6px; }
+  .fuel-table-heading > .fuel-table-actions { gap: 4px; }
+  .fuel-table-actions .button { min-height: 26px; padding: 0 6px; font-size: 6px; }
+  .fuel-add-mobile { display: inline-flex; }
+  .fuel-table-heading .fuel-export-desktop { display: inline-flex; }
+  .fuel-record-filters { grid-template-columns: 1fr 1fr; gap: 7px; margin-top: 9px; }
+  .fuel-record-filters .field-label { font-size: 6px; }
+  .fuel-record-filters .field-label select { height: 29px; font-size: 7px; }
+  .fuel-management-table table { min-width: 540px; }
+  .fuel-management-table th { height: 27px; font-size: 6px; }
+  .fuel-management-table td { height: 32px; font-size: 7px; }
+  .fuel-management-table .text-button { font-size: 7px; }
+  .fuel-records-footnote { font-size: 6px; }
+  .fuel-records-footnote > span:last-child { display: none; }
+  .fuel-record-bottom-grid { grid-template-columns: 1fr; gap: 8px; margin-top: 8px; }
+  .fuel-vehicle-chart, .fuel-quality-card { min-height: 145px; padding: 10px; }
+  .fuel-vehicle-bars { height: 88px; margin-top: 5px; }
+  .fuel-quality-card > strong { margin-top: 12px; font-size: 14px; }
+  .fuel-quality-card p, .fuel-quality-card > small { font-size: 6px; }
+  .entry-page-layout, .fuel-entry-layout { grid-template-columns: 1fr; gap: 8px; }
+  .entry-form-panel, .entry-aside-card { padding: 11px; }
+  .entry-panel-heading { margin-bottom: 10px; }
+  .entry-panel-heading h2, .entry-aside-card h2 { font-size: 9px; }
+  .entry-panel-heading p, .entry-aside-card > p { font-size: 7px; }
+  .entry-form-grid { column-gap: 8px; }
+  .entry-form-grid .field-label, .fuel-entry-form > .field-label { gap: 4px; margin-bottom: 8px; font-size: 6px; }
+  .entry-form-grid .field-label input, .entry-form-grid .field-label select, .entry-form-panel > .field-label input { height: 30px; font-size: 7px; }
+  .entry-form-grid .field-label small { font-size: 6px; }
+  .entry-estimate { margin-bottom: 8px; padding: 8px; }
+  .entry-estimate strong { font-size: 7px; }
+  .entry-estimate span { font-size: 6px; }
+  .entry-form-actions { margin-top: 9px; }
+  .entry-form-actions .button { min-height: 29px; font-size: 7px; }
+  .entry-aside { gap: 8px; }
+  .entry-aside-car { margin: 9px 0 4px; }
+  .entry-aside-card > .badge { font-size: 6px; }
+  .fuel-total-preview { margin-bottom: 8px; padding: 9px; }
+  .fuel-total-preview > strong { font-size: 18px; }
+  .fuel-total-preview > span, .fuel-total-preview > small, .preview-caption { font-size: 6px; }
+  .preview-value { font-size: 15px; }
+  .fuel-capacity-notice { padding: 9px; }
+  .fuel-capacity-notice strong, .fuel-capacity-notice span { font-size: 6px; }
+  .analytics-toolbar { font-size: 7px; }
+  .analytics-toolbar > .button { min-height: 27px; font-size: 7px; }
+  .analytics-filter-form { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+  .analytics-filter-form .field-label { gap: 4px; font-size: 6px; }
+  .analytics-filter-form .field-label select { height: 28px; font-size: 7px; }
+  .analytics-filter-form > .button { min-height: 28px; font-size: 7px; }
+  .analytics-summary-grid { margin-top: 8px; }
+  .analytics-summary-card { min-height: 62px; gap: 3px; padding: 8px; }
+  .analytics-summary-card > span, .analytics-summary-card > small { font-size: 6px; }
+  .analytics-summary-card > strong { font-size: 15px; }
+  .analytics-visual-grid { grid-template-columns: 1fr; gap: 8px; margin-top: 8px; }
+  .analytics-chart-card { min-height: 165px; padding: 10px; }
+  .analytics-chart-card h2 { font-size: 8px; }
+  .analytics-chart-card > p { font-size: 6px; }
+  .analytics-line-chart { height: 105px; }
+  .analytics-bars { height: 112px; margin-top: 8px; }
+  .cost-analysis-content { min-height: 110px; }
+  .cost-donut { width: 96px; height: 96px; }
+  .cost-donut > div { width: 64px; height: 64px; }
+  .analytics-vehicle-table { margin-top: 8px; padding: 10px; }
+  .analytics-vehicle-table h2 { font-size: 8px; }
+  .analytics-vehicle-table table { min-width: 430px; }
+  .analytics-vehicle-table th, .analytics-vehicle-table td { height: 29px; font-size: 6px; }
+  .analytics-tip { margin-top: 8px; padding: 8px; }
+  .analytics-tip strong { font-size: 7px; }
+  .analytics-tip small { font-size: 6px; }
+  .notifications-toolbar { align-items: flex-start; flex-direction: column-reverse; gap: 4px; margin-bottom: 7px; }
+  .notifications-toolbar > .button { align-self: flex-end; min-height: 27px; font-size: 7px; }
+  .notification-filter-tabs { width: 100%; justify-content: space-between; gap: 3px; }
+  .notification-filter-tabs button { font-size: 6px; }
+  .notifications-layout { grid-template-columns: 1fr; gap: 8px; }
+  .notification-feed, .notification-aside { gap: 7px; }
+  .notification-card { min-height: 76px; gap: 7px; padding: 9px; }
+  .notification-card .notification-icon { width: 23px; height: 23px; }
+  .notification-content { gap: 4px; }
+  .notification-content > .badge { font-size: 5px; }
+  .notification-content > strong { font-size: 7px; }
+  .notification-content > span:not(.badge) { font-size: 6px; }
+  .notification-content > small { font-size: 5px; }
+  .notification-unread-dot { top: 11px; right: 10px; width: 5px; height: 5px; }
+  .notification-aside { grid-template-columns: 1fr 1fr; }
+  .notification-preferences, .notification-guide { padding: 9px; }
+  .notification-preferences h2, .notification-guide h2 { font-size: 8px; }
+  .notification-preferences > p, .notification-guide > p, .notification-guide > small { font-size: 6px; }
+  .preference-row { margin: 7px 0; font-size: 5px; }
+  .preference-toggle { width: 21px; height: 13px; }
+  .preference-toggle b { width: 9px; height: 9px; }
+  .preference-toggle.on b { transform: translateX(8px); }
+  .notification-preferences > .button { min-height: 24px; padding: 0 6px; font-size: 6px; }
+}
+
+@media (max-width: 700px) {
+  body { padding-bottom: 59px; }
+  .topbar { min-height: 54px; padding: 0 10px; }
+  .mobile-brand { display: flex; align-items: center; gap: 6px; margin-right: auto; color: #19384c; text-decoration: none; }
+  .mobile-brand .brand-symbol { width: 26px; height: 26px; border-radius: 7px; background: #168363; color: #fff; }
+  .mobile-brand strong { font-family: "Manrope", sans-serif; font-size: 10px; }
+  .mobile-menu-button { display: inline-grid; width: 27px; height: 30px; }
+  .search-box { display: none; }
+  .topbar-right { gap: 4px; }
+  .notification-button { width: 30px; }
+  .top-profile > .avatar { width: 24px; height: 24px; }
+  .page-content { padding: 13px 10px 18px; }
+  .section-title { margin-bottom: 12px; }
+  .section-title .eyebrow { color: #728b98; font-size: 7px; }
+  .section-title h1 { max-width: 100%; margin-top: 4px; color: #19384c; font-size: 18px; letter-spacing: -.35px; }
+  .section-title .title-detail { max-width: none; margin-top: 3px; font-size: 8px; }
+  .section-title > .button { display: none; }
+  .mobile-bottom-nav { position: fixed; z-index: 30; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: repeat(4, 1fr); min-height: 55px; padding: 5px 5px max(5px, env(safe-area-inset-bottom)); border-top: 1px solid #e5ebee; background: rgba(255,255,255,.97); box-shadow: 0 -3px 12px rgba(27, 56, 68, .04); }
+  .mobile-bottom-nav button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; border: 0; background: transparent; color: #78909c; cursor: pointer; }
+  .mobile-bottom-nav button span { font-size: 7px; }
+  .mobile-bottom-nav button.active { color: #168363; }
+  .mobile-bottom-nav button.active span { font-weight: 700; }
+
+  .dashboard-actions { gap: 6px; margin: -2px 0 9px; }
+  .dashboard-actions .button { min-height: 29px; padding: 0 8px; font-size: 8px; }
+  .dashboard-status-grid { grid-template-columns: 1fr; gap: 8px; }
+  .dashboard-status-card { padding: 11px; }
+  .dashboard-status-card .panel-heading { margin-bottom: 8px; }
+  .dashboard-status-card .panel-heading h2 { font-size: 9px; }
+  .dashboard-status-card .panel-heading p { font-size: 7px; }
+  .dashboard-fuel-metrics, .dashboard-budget-metrics { gap: 6px; margin: 8px 0; }
+  .dashboard-fuel-metrics strong, .dashboard-budget-metrics strong { font-size: 15px; }
+  .dashboard-fuel-metrics span, .dashboard-budget-metrics span { font-size: 6px; }
+  .dashboard-footnote { margin-top: 6px; font-size: 6px; }
+  .dashboard-progress, .budget-progress-track { height: 4px; }
+  .dashboard-chart-grid { margin-top: 8px; }
+  .dashboard-chart-grid .chart-panel { min-height: 180px; }
+  .dashboard-trips-card, .dashboard-recommendations { margin-top: 8px; padding: 10px; }
+  .dashboard-trips-card .panel-heading, .dashboard-recommendations .panel-heading { margin-bottom: 7px; }
+  .dashboard-trips-card table { min-width: 500px; }
+  .dashboard-trips-card th { height: 25px; font-size: 6px; }
+  .dashboard-trips-card td { height: 30px; font-size: 7px; }
+  .dashboard-recommendation-grid { grid-template-columns: 1fr; gap: 6px; }
+  .dashboard-recommendation { min-height: 48px; gap: 7px; padding: 8px; }
+  .dashboard-recommendation > .icon { width: 13px; height: 13px; }
+  .dashboard-recommendation strong { font-size: 7px; }
+  .dashboard-recommendation p { margin-top: 3px; font-size: 6px; }
+
+  .budget-summary-grid { grid-template-columns: 1fr; gap: 7px; }
+  .budget-summary-card { min-height: 69px; gap: 3px; padding: 9px; }
+  .budget-summary-card > span, .budget-summary-card > small { font-size: 7px; }
+  .budget-summary-card > strong { font-size: 17px; }
+  .budget-summary-icon { top: 9px; right: 10px; }
+  .budget-progress-panel { margin-top: 8px; padding: 10px; }
+  .budget-progress-heading h2 { font-size: 8px; }
+  .budget-progress-heading .badge { font-size: 6px; }
+  .budget-progress-panel > p { font-size: 6px; }
+  .budget-analytics-grid { grid-template-columns: 1fr; gap: 8px; margin-top: 8px; }
+  .budget-analytics-grid > .chart-panel { min-height: 205px; }
+  .expense-trend-chart { height: 125px; }
+  .budget-management-grid { grid-template-columns: 1fr; gap: 8px; margin-top: 8px; }
+  .budget-update-panel, .budget-vehicle-panel, .budget-alerts-panel { padding: 10px; }
+  .budget-update-panel .field-label { font-size: 7px; }
+  .budget-update-panel .field-label input, .budget-update-panel .field-label select { height: 31px; }
+  .budget-form-note, .budget-alert p { font-size: 6px; }
+  .budget-vehicle-panel table { min-width: 380px; }
+  .budget-alerts-panel { margin-top: 8px; }
+  .budget-alert-grid { grid-template-columns: 1fr; gap: 6px; }
+  .budget-alert { min-height: 0; padding: 8px; }
+  .budget-alert strong { font-size: 7px; }
+
+  .crisis-status-banner { gap: 6px; margin-bottom: 8px; padding: 8px; }
+  .crisis-status-banner strong { font-size: 7px; }
+  .crisis-status-banner p { font-size: 6px; }
+  .crisis-status-banner .badge { font-size: 6px; }
+  .crisis-controls-panel, .crisis-forecast-panel, .crisis-suggestions-panel, .crisis-priority-panel, .emergency-panel { margin-bottom: 8px; padding: 10px; }
+  .crisis-information-grid { grid-template-columns: 1fr; gap: 0; }
+  .crisis-guidance-column { gap: 0; }
+  .crisis-controls-panel .panel-heading, .crisis-forecast-panel .panel-heading, .crisis-suggestions-panel .panel-heading, .crisis-priority-panel .panel-heading, .emergency-panel .panel-heading { margin-bottom: 7px; }
+  .crisis-controls-panel .panel-heading h2, .crisis-forecast-panel .panel-heading h2, .crisis-suggestions-panel .panel-heading h2, .crisis-priority-panel .panel-heading h2, .emergency-panel .panel-heading h2 { font-size: 8px; }
+  .crisis-toggle-row { font-size: 6px; }
+  .crisis-toggle-row .toggle { width: 36px; height: 21px; }
+  .crisis-toggle-row .toggle i { width: 15px; height: 15px; }
+  .crisis-toggle-row .toggle.on i { transform: translateX(15px); }
+  .crisis-controls-panel > .badge { font-size: 6px; }
+  .forecast-days { margin-top: 7px; font-size: 18px; }
+  .forecast-description { font-size: 6px; }
+  .forecast-chart-title, .forecast-legend, .forecast-disclaimer { font-size: 6px; }
+  .crisis-forecast { height: 112px; }
+  .conservation-suggestion { gap: 6px; padding: 8px 0; }
+  .conservation-suggestion strong { font-size: 7px; }
+  .conservation-suggestion p { font-size: 6px; }
+  .priority-trip, .priority-trip strong { font-size: 6px; }
+  .emergency-panel > p, .emergency-panel > small { font-size: 6px; }
+  .emergency-callout { padding: 8px; }
+  .emergency-callout strong, .emergency-callout p { font-size: 7px; }
+  .emergency-panel > .button { min-height: 27px; }
+
+  .trip-planner-layout { grid-template-columns: 1fr; gap: 8px; }
+  .trip-form-panel { padding: 10px; }
+  .trip-form-panel .panel-heading { margin-bottom: 10px; }
+  .trip-form-panel .panel-heading h2 { font-size: 9px; }
+  .trip-form-panel .panel-heading p { font-size: 6px; }
+  .trip-form-panel .field-label { gap: 4px; margin-bottom: 7px; font-size: 6px; }
+  .trip-form-panel .field-label input, .trip-form-panel .field-label select { height: 30px; font-size: 7px; }
+  .trip-form-panel > .button { min-height: 29px; font-size: 7px; }
+  .trip-fuel-available { margin-top: 7px; padding: 7px; }
+  .trip-fuel-available strong, .trip-fuel-available p { font-size: 6px; }
+  .trip-form-footnote { font-size: 6px; }
+  .trip-crisis-link { display: block; font-size: 6px; }
+  .trip-map-heading { padding: 7px; }
+  .trip-map-heading > span, .trip-map-heading .badge { font-size: 6px; }
+  .trip-map-panel .map-preview { min-height: 190px; }
+  .trip-map-panel .map-caption { font-size: 6px; }
+  .trip-context-panel, .trip-route-alert, .desktop-trip-before { display: none; }
+  .trip-route-options { display: grid; gap: 7px; margin-top: 8px; }
+  .trip-route-options.show-routes { grid-template-columns: 1fr; }
+  .trip-route-option, .trip-why-route { padding: 10px; }
+  .trip-option-heading { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+  .trip-option-heading > div { display: flex; align-items: center; gap: 6px; color: #168363; }
+  .trip-option-heading strong { color: #26465b; font-size: 7px; }
+  .trip-option-heading .badge { font-size: 6px; }
+  .trip-option-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px; margin-top: 9px; }
+  .trip-option-stats > div { display: flex; justify-content: space-between; gap: 7px; }
+  .trip-option-stats span, .trip-option-stats strong { font-size: 6px; }
+  .trip-option-stats span { color: #82949c; }
+  .trip-option-stats strong { color: #486477; }
+  .trip-option-note { margin: 8px 0; color: #81939a; font-size: 6px; }
+  .trip-route-option .button { min-height: 26px; font-size: 6px; }
+  .trip-why-route .panel-heading { margin-bottom: 7px; }
+  .trip-why-route .panel-heading h2 { font-size: 7px; }
+  .trip-why-route p { margin: 5px 0; color: #80929a; font-size: 6px; line-height: 1.5; }
+  .trip-why-route .small-control { min-height: 25px; font-size: 6px; }
+  .trip-before-go { margin-top: 8px; padding: 10px; }
+  .trip-before-go > div:last-child { grid-template-columns: 1fr; gap: 8px; }
+  .trip-before-go strong { font-size: 7px; }
+  .trip-before-go small { font-size: 6px; }
+
+  .fleet-management-panel { margin-bottom: 8px; padding: 10px; }
+  .fleet-management-heading { margin-bottom: 8px; }
+  .fleet-management-heading h2 { font-size: 10px; }
+  .fleet-management-heading p { font-size: 6px; }
+  .fleet-management-heading .button { min-height: 27px; padding: 0 7px; font-size: 6px; }
+  .fleet-search { height: 29px; }
+  .fleet-search input { font-size: 7px; }
+  .fleet-filters { gap: 12px; margin-top: 8px; }
+  .fleet-filters button { font-size: 6px; }
+  .fleet-vehicle-list { grid-template-columns: 1fr; gap: 7px; }
+  .fleet-vehicle-card { padding: 10px; }
+  .fleet-card-heading { gap: 6px; }
+  .fleet-card-heading strong { font-size: 7px; }
+  .fleet-card-heading small { font-size: 6px; }
+  .fleet-card-heading .badge { font-size: 6px; }
+  .fleet-vehicle-details { gap: 7px; margin: 10px 0; }
+  .fleet-vehicle-details dt, .fleet-vehicle-details dd { font-size: 6px; }
+  .fleet-card-actions { gap: 5px; margin-top: 8px; }
+  .fleet-card-actions .button { min-height: 25px; padding: 0 7px; font-size: 6px; }
+  .fleet-tip { margin-top: 8px; padding: 8px; }
+  .fleet-tip strong, .fleet-tip p { font-size: 6px; }
+  .app-footer { display: none; }
+}
+
+.button-danger { border-color: #f3dddd; background: #fcf0f0; color: #b64c4c; }
+.trip-route-option.selected { border-color: #168363; box-shadow: 0 0 0 1px #168363; }
+.fleet-card-actions .button-danger { margin-left: auto; }
+
+@media (max-width: 700px) {
+  .page-content .panel-heading h2 { font-size: 11px; }
+  .page-content .panel-heading p { font-size: 9px; }
+  .page-content .dashboard-status-card .panel-heading h2 { font-size: 10px; }
+  .page-content .dashboard-status-card .panel-heading p { font-size: 8px; }
+  .page-content .dashboard-fuel-metrics strong, .page-content .dashboard-budget-metrics strong { font-size: 20px; }
+  .page-content .dashboard-fuel-metrics span, .page-content .dashboard-budget-metrics span { font-size: 8px; }
+  .page-content .dashboard-footnote, .page-content .dashboard-recommendation p { font-size: 8px; }
+  .page-content .dashboard-trips-card th { font-size: 8px; }
+  .page-content .dashboard-trips-card td { font-size: 9px; }
+  .page-content .dashboard-recommendation strong { font-size: 9px; }
+
+  .page-content .budget-summary-card > span, .page-content .budget-summary-card > small { font-size: 9px; }
+  .page-content .budget-progress-heading h2 { font-size: 10px; }
+  .page-content .budget-progress-heading .badge { font-size: 7px; }
+  .page-content .budget-progress-panel > p, .page-content .budget-form-note, .page-content .budget-alert p { font-size: 8px; }
+  .page-content .budget-update-panel .field-label { font-size: 9px; }
+  .page-content .budget-update-panel .button { font-size: 9px; }
+  .page-content .budget-alert strong { font-size: 9px; }
+
+  .page-content .crisis-status-banner strong { font-size: 9px; }
+  .page-content .crisis-status-banner p { font-size: 8px; }
+  .page-content .crisis-status-banner .badge, .page-content .crisis-controls-panel > .badge { font-size: 7px; }
+  .page-content .crisis-controls-panel .panel-heading h2, .page-content .crisis-forecast-panel .panel-heading h2, .page-content .crisis-suggestions-panel .panel-heading h2, .page-content .crisis-priority-panel .panel-heading h2, .page-content .emergency-panel .panel-heading h2 { font-size: 10px; }
+  .page-content .crisis-toggle-row { font-size: 8px; }
+  .page-content .forecast-description, .page-content .forecast-chart-title, .page-content .forecast-legend, .page-content .forecast-disclaimer { font-size: 8px; }
+  .page-content .crisis-forecast-axis, .page-content .crisis-forecast-days { font-size: 8px; }
+  .page-content .conservation-suggestion strong, .page-content .priority-trip, .page-content .priority-trip strong { font-size: 9px; }
+  .page-content .conservation-suggestion p, .page-content .emergency-panel > p, .page-content .emergency-panel > small { font-size: 8px; }
+  .page-content .emergency-callout strong, .page-content .emergency-callout p { font-size: 9px; }
+
+  .page-content .trip-form-panel .panel-heading h2 { font-size: 11px; }
+  .page-content .trip-form-panel .panel-heading p { font-size: 9px; }
+  .page-content .trip-form-panel .field-label { font-size: 9px; }
+  .page-content .trip-form-panel .field-label input, .page-content .trip-form-panel .field-label select { font-size: 10px; }
+  .page-content .trip-form-panel > .button { font-size: 9px; }
+  .page-content .trip-fuel-available strong, .page-content .trip-fuel-available p, .page-content .trip-form-footnote { font-size: 8px; }
+  .page-content .trip-crisis-link { font-size: 8px; }
+  .page-content .trip-map-heading > span, .page-content .trip-map-heading .badge, .page-content .trip-map-panel .map-caption { font-size: 8px; }
+  .page-content .trip-option-heading strong { font-size: 9px; }
+  .page-content .trip-option-heading .badge { font-size: 7px; }
+  .page-content .trip-option-stats span, .page-content .trip-option-stats strong, .page-content .trip-option-note { font-size: 8px; }
+  .page-content .trip-route-option .button, .page-content .trip-why-route p, .page-content .trip-why-route .small-control { font-size: 8px; }
+
+  .page-content .fleet-management-heading h2 { font-size: 12px; }
+  .page-content .fleet-management-heading p { font-size: 8px; }
+  .page-content .fleet-management-heading .button { font-size: 8px; }
+  .page-content .fleet-search input, .page-content .fleet-filters button { font-size: 9px; }
+  .page-content .fleet-card-heading strong { font-size: 10px; }
+  .page-content .fleet-card-heading small, .page-content .fleet-card-heading .badge { font-size: 8px; }
+  .page-content .fleet-vehicle-details dt, .page-content .fleet-vehicle-details dd { font-size: 9px; }
+  .page-content .fleet-card-actions .button { font-size: 8px; }
+  .page-content .fleet-detail-expanded strong, .page-content .fleet-detail-expanded span, .page-content .fleet-tip strong, .page-content .fleet-tip p { font-size: 8px; }
+}
+/* Figma Vehicle Management screen */
+.sf-vehicles-page { display: grid; gap: 18px; }
+.sf-vehicle-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.sf-vehicle-browser { padding: 19px; }
+.sf-vehicle-tools { display: grid; grid-template-columns: minmax(230px, 1fr) 190px 170px; gap: 12px; align-items: end; margin-bottom: 18px; }
+.sf-vehicle-search { min-height: 42px; display: flex; align-items: center; gap: 9px; padding: 0 12px; border: 1px solid #dfe7eb; border-radius: 7px; color: #7b929e; }
+.sf-vehicle-search input { border: 0; outline: 0; width: 100%; color: #183849; font: inherit; font-size: 12px; background: transparent; }
+.sf-vehicle-select { display: grid; gap: 6px; color: #758993; font-size: 10px; }
+.sf-vehicle-select select { width: 100%; height: 42px; border: 1px solid #dfe7eb; border-radius: 7px; padding: 0 10px; color: #244352; background: #fff; font: inherit; font-size: 11px; }
+.sf-vehicle-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.sf-vehicle-card { min-width: 0; padding: 16px; border: 1px solid #e2e9ec; border-radius: 9px; background: #fff; }
+.sf-vehicle-card-head { display: flex; align-items: center; gap: 10px; }
+.sf-vehicle-icon { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 8px; color: #177f6b; background: #e8f5f0; }
+.sf-vehicle-name { flex: 1; min-width: 0; }
+.sf-vehicle-name h2 { margin: 0 0 4px; color: #173548; font-size: 14px; font-weight: 650; }
+.sf-vehicle-name span { color: #82939b; font-size: 10px; }
+.sf-vehicle-card-head .badge { white-space: nowrap; }
+.sf-vehicle-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 13px 10px; padding: 17px 0 14px; margin-top: 13px; border-top: 1px solid #edf0f1; }
+.sf-vehicle-specs div, .sf-fuel-level > div:first-child { display: grid; gap: 5px; }
+.sf-vehicle-specs span, .sf-fuel-level span { color: #84949b; font-size: 10px; }
+.sf-vehicle-specs strong, .sf-fuel-level strong { color: #284450; font-size: 11px; font-weight: 600; }
+.sf-fuel-level { padding-bottom: 14px; }
+.sf-fuel-level > div:first-child { display: flex; justify-content: space-between; align-items: center; margin-bottom: 9px; }
+.sf-fuel-track { height: 6px; overflow: hidden; border-radius: 9px; background: #edf1f0; }
+.sf-fuel-track i { display: block; height: 100%; border-radius: inherit; background: #16846c; }
+.sf-vehicle-actions { display: flex; gap: 8px; padding-top: 12px; border-top: 1px solid #edf0f1; }
+.sf-vehicle-actions .button { min-height: 34px; padding: 0 10px; font-size: 10px; }
+.sf-delete-vehicle { display: grid; width: 34px; height: 34px; margin-left: auto; place-items: center; border: 1px solid #e7e9e9; border-radius: 6px; color: #8d7777; background: #fff; cursor: pointer; }
+.sf-vehicle-tip { display: flex; gap: 11px; padding: 15px; border: 1px solid #deebe6; border-radius: 8px; color: #16775f; background: #f1f8f5; }
+.sf-vehicle-tip strong { color: #21483d; font-size: 12px; }
+.sf-vehicle-tip p { margin: 4px 0 0; color: #687d78; font-size: 11px; }
+.sf-vehicle-empty { grid-column: 1 / -1; color: #71838b; font-size: 13px; text-align: center; padding: 30px; }
+.sf-vehicle-mobile-summary, .sf-mobile-filters { display: none; }
+@media (max-width: 760px) {
+  .sf-vehicles-page { gap: 12px; }
+  .sf-vehicle-mobile-summary { display: block; color: #748791; font-size: 11px; margin-top: -6px; }
+  .sf-vehicle-metrics, .sf-vehicle-tip, .sf-vehicle-select { display: none; }
+  .sf-vehicle-browser { padding: 11px; }
+  .sf-vehicle-tools { display: block; margin: 0 0 11px; }
+  .sf-vehicle-search { min-height: 40px; }
+  .sf-vehicle-search input { font-size: 11px; }
+  .sf-mobile-filters { display: flex; gap: 7px; margin: 0 0 11px; overflow: auto; }
+  .sf-mobile-filters button { flex: none; min-height: 32px; padding: 0 11px; border: 1px solid #e0e8e9; border-radius: 18px; color: #536a73; background: #fff; font: inherit; font-size: 10px; }
+  .sf-mobile-filters button.active { color: #fff; border-color: #126b5b; background: #126b5b; }
+  .sf-vehicle-list { grid-template-columns: 1fr; gap: 9px; }
+  .sf-vehicle-card { padding: 12px; }
+  .sf-vehicle-name h2 { font-size: 12px; }
+  .sf-vehicle-specs { gap: 10px; padding: 12px 0 10px; margin-top: 10px; }
+  .sf-vehicle-specs span, .sf-fuel-level span { font-size: 9px; }
+  .sf-vehicle-specs strong, .sf-fuel-level strong { font-size: 10px; }
+  .sf-vehicle-actions .button { font-size: 9px; }
+}

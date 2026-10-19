@@ -1,0 +1,101 @@
+.sf-auth-page { display: grid; grid-template-columns: 580px minmax(0, 1fr); min-height: 100vh; background: #f3f6f8; color: #183347; font-family: Inter, "DM Sans", sans-serif; }
+.sf-auth-page * { box-sizing: border-box; }
+.sf-auth-mobile-brand { display: none; }
+.sf-auth-welcome { position: relative; display: flex; min-height: 100vh; flex-direction: column; align-items: flex-start; gap: 42px; padding: 40px 56px 30px; overflow: hidden; background: #102b40; color: #fff; }
+.sf-auth-brand { display: inline-flex; align-items: center; gap: 10px; padding: 0; border: 0; background: transparent; color: #fff; text-align: left; cursor: pointer; }
+.sf-auth-brand > span { display: grid; width: 36px; height: 36px; flex: none; place-items: center; border-radius: 10px; background: #168363; }
+.sf-auth-brand img { display: block; }
+.sf-auth-brand strong { max-width: 245px; font-size: 15px; font-weight: 700; line-height: 1.25; }
+.sf-auth-story { display: flex; width: 100%; flex-direction: column; align-items: flex-start; gap: 18px; }
+.sf-auth-pill { padding: 4px 9px; border-radius: 6px; background: #e8f5ef; color: #168363; font-size: 11px; font-weight: 600; }
+.sf-auth-story h1 { max-width: 470px; margin: 0; color: #fff; font-size: 32px; font-weight: 650; letter-spacing: -.4px; line-height: 1.35; }
+.sf-auth-story > p { max-width: 468px; margin: 0; color: #b4c7d3; font-size: 12px; line-height: 1.5; }
+.sf-auth-mobile-copy { display: none; }
+.sf-auth-mobile-leaf { display: none; }
+.sf-auth-map { width: 100%; max-width: 468px; }
+.sf-map-auth { aspect-ratio: 468 / 280; border-radius: 14px; }
+.sf-map-art-auth { width: 468px; height: 280px; }
+.sf-map-art-auth .sf-map-district { top: 30px; left: 280.8px; width: 107.64px; height: 84px; }
+.sf-map-art-auth .sf-map-park { top: 106.4px; left: 56.16px; width: 112.32px; height: 84px; }
+.sf-map-art-auth .sf-map-river { left: 349.47px; width: 99.216px; height: 285.742px; }
+.sf-map-art-auth .sf-map-river::before { width: 60.84px; height: 280px; }
+.sf-map-art-auth .sf-map-layer { width: 468px; height: 280px; }
+.sf-map-art-auth .sf-map-streets img { top: 28.42px; left: 52.98px; }
+.sf-map-art-auth .sf-map-main-road img { top: -1.29px; left: -1.50px; }
+.sf-map-art-auth .sf-map-route-a img { top: 0; left: -2.48px; }
+.sf-map-art-auth .sf-map-route-b img { top: 0; left: -3px; }
+.sf-map-art-auth .sf-map-city { top: 11.2px; left: 154.44px; }
+.sf-map-art-auth .sf-map-indiranagar { top: 50.4px; left: 32.76px; }
+.sf-map-art-auth .sf-map-park-label { top: 140px; left: 70.2px; }
+.sf-map-art-auth .sf-map-mg { top: 86.8px; left: 196.56px; }
+.sf-map-art-auth .sf-map-airport { top: 30.8px; left: 280.8px; }
+.sf-map-art-auth .sf-map-ring { top: 240.8px; left: 229.32px; }
+.sf-map-art-auth .sf-map-pin-a { top: 214.87px; left: 38.96px; }
+.sf-map-art-auth .sf-map-pin-b { top: 31.96px; left: 374.72px; }
+.sf-map-art-auth .sf-map-caption { font-size: 7px; }
+.sf-auth-promises { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.sf-auth-promises li { display: flex; align-items: center; gap: 9px; color: #b4c7d3; font-size: 11px; }
+.sf-auth-promises img { display: block; }
+.sf-auth-disclaimer { margin-top: auto; color: #8195a4; font-size: 9px; }
+.sf-auth-main { display: flex; min-width: 0; min-height: 100vh; flex-direction: column; align-items: center; justify-content: center; padding: 40px 32px; }
+.sf-auth-card { width: min(100%, 480px); padding: 40px; border-radius: 16px; background: #fff; box-shadow: 0 12px 32px rgba(16,43,64,.11); }
+.sf-auth-register .sf-auth-card { width: min(100%, 520px); padding: 36px; }
+.sf-auth-form-kicker { display: inline-flex; padding: 4px 9px; border-radius: 5px; background: #f3f6f8; color: #6d7f8d; font-size: 9px; font-weight: 600; }
+.sf-auth-register .sf-auth-form-kicker { background: #e8f5ef; color: #168363; }
+.sf-auth-card h2 { margin: 16px 0 7px; color: #183347; font-size: 22px; font-weight: 650; letter-spacing: -.3px; }
+.sf-auth-intro { margin: 0 0 26px; color: #6d7f8d; font-size: 11px; }
+.sf-auth-field { display: flex; flex-direction: column; gap: 7px; margin: 0 0 18px; color: #183347; font-size: 10px; font-weight: 600; }
+.sf-auth-field input { width: 100%; height: 44px; padding: 0 12px; border: 1px solid #e2e9ee; border-radius: 7px; outline: none; background: #fff; color: #183347; font-size: 11px; font-weight: 400; }
+.sf-auth-field input:focus { border-color: #168363; box-shadow: 0 0 0 3px rgba(22,131,99,.1); }
+.sf-auth-field > small { color: #8293a0; font-size: 9px; font-weight: 400; }
+.sf-auth-options { display: flex; align-items: center; justify-content: space-between; margin: 0 0 20px; }
+.sf-auth-options label { display: inline-flex; align-items: center; gap: 7px; color: #183347; font-size: 10px; }
+.sf-auth-options input { width: 15px; height: 15px; margin: 0; accent-color: #168363; }
+.sf-auth-options button, .sf-auth-switch button { padding: 0; border: 0; background: none; color: #168363; font: inherit; font-size: 10px; font-weight: 600; cursor: pointer; }
+.sf-auth-type { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0 0 18px; padding: 0; border: 0; }
+.sf-auth-type legend { width: 100%; margin-bottom: 8px; color: #183347; font-size: 10px; font-weight: 600; }
+.sf-auth-type label { position: relative; display: flex; min-height: 42px; align-items: center; gap: 8px; padding: 0 11px; border: 1px solid #e2e9ee; border-radius: 7px; color: #183347; font-size: 10px; }
+.sf-auth-type label.selected { border-color: #168363; background: #e8f5ef; }
+.sf-auth-type input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.sf-auth-type .icon { color: #168363; }
+.sf-auth-terms { margin: -2px 0 16px; color: #6d7f8d; font-size: 9px; }
+.sf-auth-help { margin: -10px 0 14px; color: #a66237; font-size: 10px; }
+.sf-auth-submit { display: inline-flex; min-height: 42px; align-items: center; justify-content: center; gap: 8px; padding: 0 18px; border: 0; border-radius: 7px; background: #168363; color: #fff; font-size: 11px; font-weight: 650; cursor: pointer; }
+.sf-auth-switch { display: flex; align-items: center; gap: 8px; margin-top: 24px; color: #6d7f8d; font-size: 10px; }
+.sf-auth-consent { width: min(100%, 480px); margin: 22px 0 0; color: #81919c; font-size: 9px; text-align: center; }
+.sf-auth-demo { display: none; }
+
+@media (max-width: 760px) {
+  .sf-auth-page { display: flex; min-height: 100vh; flex-direction: column; padding: 24px; }
+  .sf-auth-mobile-brand { display: block; margin-bottom: 28px; }
+  .sf-auth-mobile-brand .sf-auth-brand { color: #183347; }
+  .sf-auth-mobile-brand .sf-auth-brand > span { width: 36px; height: 36px; border-radius: 10px; }
+  .sf-auth-mobile-brand .sf-auth-brand strong { font-size: 14px; }
+  .sf-auth-desktop-brand, .sf-auth-pill, .sf-auth-map, .sf-auth-promises, .sf-auth-disclaimer { display: none; }
+  .sf-auth-mobile-leaf { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; }
+  .sf-auth-mobile-leaf img { display: block; }
+  .sf-auth-welcome { min-height: 145px; flex: none; gap: 12px; padding: 22px 24px; border-radius: 18px; }
+  .sf-auth-story { gap: 9px; }
+  .sf-auth-desktop-copy { display: none; }
+  .sf-auth-mobile-copy { display: inline; }
+  .sf-auth-story h1 { font-size: 25px; line-height: 1.25; }
+  .sf-auth-story > p { font-size: 12px; }
+  .sf-auth-main { min-height: 0; flex: 1; align-items: stretch; justify-content: flex-start; padding: 28px 0 0; }
+  .sf-auth-card, .sf-auth-register .sf-auth-card { width: 100%; padding: 24px; border-radius: 18px; }
+  .sf-auth-card h2 { margin-top: 0; font-size: 29px; }
+  .sf-auth-intro { margin-bottom: 24px; font-size: 12px; }
+  .sf-auth-field { gap: 8px; margin-bottom: 22px; font-size: 12px; }
+  .sf-auth-field input { height: 44px; font-size: 12px; }
+  .sf-auth-options { margin: 0 0 23px; }
+  .sf-auth-options label, .sf-auth-options button { font-size: 11px; }
+  .sf-auth-submit { min-height: 42px; font-size: 12px; }
+  .sf-auth-switch { margin-top: 24px; font-size: 12px; }
+  .sf-auth-switch button { font-size: 12px; }
+  .sf-auth-consent { margin: 28px 0 0; text-align: left; font-size: 10px; }
+  .sf-auth-register .sf-auth-card h2 { font-size: 26px; }
+  .sf-auth-register .sf-auth-field { margin-bottom: 16px; }
+}
+@media (max-width: 410px) {
+  .sf-auth-page { padding: 24px; }
+  .sf-auth-welcome { padding: 22px 24px; }
+}
